@@ -126,6 +126,10 @@ function greenButton($text) {
 greenButton("STUDENTS");
 greenButton("SPONSORS");
 greenButton("COMMUNITY");
+
+echo "<br />";
+
+explain("STUDENTS");
 echo '</div>';
 
 #Explination Text below the big green buttons
@@ -137,7 +141,6 @@ function explain($text) {
            style="
              display: inline-block;
              width:', $widthb, 'px;
-             height:', $heightb, 'px;
            ">';
     echo '<p 
            style="
