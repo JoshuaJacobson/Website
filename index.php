@@ -128,6 +128,40 @@ greenButton("SPONSORS");
 greenButton("COMMUNITY");
 echo '</div>';
 
+#Explination Text below the big green buttons
+function explain($text) {
+    global $widthb, $heightb, $textheight, $left, $right, $width;
+
+    echo '<div 
+           id="', strtolower($text) ,'_explained" 
+           style="
+             display: inline-block;
+             width:', $widthb, 'px;
+             height:', $heightb, 'px;
+           ">';
+    echo '<p 
+           style="
+             color:white;
+             font-size:', $textheight*1.9/2, 'px;
+             padding-top:', $textheight*1.05/2, 'px;
+             padding-left:0px;
+             padding-bottom:', $textheight*1.05/2, 'px;
+             margin:0px;
+             line-height:', $textheight*1.9/2, 'px;
+           ">
+           ', longExplanation($text), '
+           </p>';
+    echo '</div>';
+}
+
+#Gets the text to go below the Big Green Buttons
+function longExplanation($text) {
+    $students = "Information for students and parents that are currently a part of the team or are interested in joining.";
+    if ($text == "STUDENTS") {
+        return $students;
+    }
+}
+
 ?>
 </body>
 </html>
